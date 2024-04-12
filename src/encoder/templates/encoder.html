@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<title>"Character Encoder"</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+			div.grid {
+				display: grid;
+				grid-template-columns: repeat(9, 1fr);
+				grid-template-rows: repeat(9, 1fr);
+				width: 450px;
+				height: 450px;
+				border-top: 3px solid black;
+				border-bottom: 3px solid black;
+				border-left: 3px solid black;
+				border-right: 3px solid black;
+			}
+
+			form {
+				width: 600px;
+			}
+
+			input[type="text"] {
+				width: 400px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form action="http://127.0.0.1:8080/char-encoder" method="post">
+			<fieldset>
+				<legend>Character Encoder</legend>
+				<div class="grid">
+				    {{range .Grid}}
+					    <input type="checkbox" name="charcheck" value="{{.}}" />
+					{{end}}
+				</div>
+				<div class="options">
+					<select name="charselect">
+					  <option value="" selected>--Select character--</option>
+					  <option value="0">0</option>
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+                      <option value="4">4</option>
+					  <option value="5">5</option>
+                      <option value="6">6</option>
+					  <option value="7">7</option>
+					  <option value="8">8</option>
+					  <option value="9">9</option>
+                      <option value="A">A</option>
+					  <option value="B">B</option>
+                      <option value="C">C</option>
+					  <option value="D">D</option>
+					  <option value="E">E</option>
+					  <option value="F">F</option>
+                      <option value="G">G</option>
+					  <option value="H">H</option>
+					  <option value="I">I</option>
+					  <option value="J">J</option>
+					  <option value="K">K</option>
+					  <option value="L">L</option>
+					  <option value="M">M</option>
+					  <option value="N">N</option>
+					  <option value="O">O</option>
+					  <option value="P">P</option>
+					  <option value="Q">Q</option>
+					  <option value="R">R</option>
+					  <option value="S">S</option>
+					  <option value="T">T</option>
+					  <option value="U">U</option>
+					  <option value="V">V</option>
+					  <option value="W">W</option>
+					  <option value="X">X</option>
+					  <option value="Y">Y</option>
+					  <option value="Z">Z</option>
+					  <option value="a">a</option>
+					  <option value="b">b</option>
+					  <option value="c">c</option>
+					  <option value="d">d</option>
+					  <option value="e">e</option>
+					  <option value="f">f</option>
+					  <option value="g">g</option>
+					  <option value="h">h</option>
+					  <option value="i">i</option>
+					  <option value="j">j</option>
+					  <option value="k">k</option>
+					  <option value="l">l</option>
+					  <option value="m">m</option>
+					  <option value="n">n</option>
+					  <option value="o">o</option>
+					  <option value="p">p</option>
+					  <option value="q">q</option>
+					  <option value="r">r</option>
+					  <option value="s">s</option>
+					  <option value="t">t</option>
+					  <option value="u">u</option>
+					  <option value="v">v</option>
+					  <option value="w">w</option>
+					  <option value="x">x</option>
+					  <option value="y">y</option>
+					  <option value="z">z</option>
+					  <option value="+">+</option>
+					  <option value="/">/</option>
+					</select>
+				</div>
+				<input type="submit" value="Encode" />
+				<input type="text" size="100" name="status" value="{{.Status}}" readonly />
+			</fieldset>
+		</form>
+	</body>
+</html>
