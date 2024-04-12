@@ -3,8 +3,8 @@
 <p>
 This program is a web application written in Go that uses the html/template package to create the web page.  From the src/encoder/ directory, issue "go run encode.go" to start the Character Encoder server.
 In a web browser, enter URL http://127.0.0.1:8080/char-encoder to start the application.  Select the character from the drop-down list and enter its pattern by checking the boxes in the grid.  When satisfied with
-the pattern, click the Encode button.  The character and its 91-integer encoding is saved to data/encoded_chars.csv.  Additional character entries are appended to the file.  The program converts the pattern entered
-in the 91-checkbox grid to a sequence of 1 and -1; the checked boxes are given 1, and the unchecked boxes are given -1.  These patterns can be used to train a Neural Network to perform character recognition. 
+the pattern, click the Encode button.  The character and its 81-integer encoding is saved to data/encoded_chars.csv.  Additional character entries are appended to the file.  The program converts the pattern entered
+in the 9x9 81-checkbox grid to a sequence of 1 and -1; the checked boxes are given 1, and the unchecked boxes are given -1.  These patterns can be used to train a Neural Network to perform character recognition. 
 </p>
 
 <p>Shown below is an example for entering A in the checkbox grid.  The following is what is written to the disk file:
